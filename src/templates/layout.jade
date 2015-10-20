@@ -8,7 +8,7 @@ doctype html
 head
     include head
 body.bg
-  .sticky-footer_layout
+  .wrapper
     include ../blocks/header/header
     .middle.clearfix
       aside.sidebar
@@ -20,8 +20,7 @@ body.bg
         //block sidebar
       section.content
         block content
-    .sticky-footer_footer
-    //include ../footer/footer
-    //include ../login/login
-    script(src="vendor.js")
-    script(src="custom.js")
+  include ../blocks/footer/footer
+  //include ../login/login
+  script(src="vendor.js")
+  script(src="custom.js")

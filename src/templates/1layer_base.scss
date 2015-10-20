@@ -59,9 +59,24 @@ $color1: #f7f6f5; //gray
 /*
     STYLES
 */
-body{
+html, body{
+  height: 100%;
   width: 100%;
 }
+
+// stiky footer
+.wrapper{
+  position:relative;
+  min-height:100%;
+  height:auto!important;
+  overflow:hidden;
+}
+.wrapper:after {
+  content: "";
+  height: 80px;
+  display: block;
+}
+
 
 .bg{
   //noinspection CssUnknownTarget
