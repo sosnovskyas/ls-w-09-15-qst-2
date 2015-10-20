@@ -1,4 +1,7 @@
 .footer{
-  height: 80px;
-  margin-top: -80px;
+  height: $footer-height;
+  margin-top: -$footer-height;
+  //noinspection CssUnknownTarget
+  background-image: url('/i/footer-bg.png');
+  @include set_font("open_sans",14px, #fff);
 }
