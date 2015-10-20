@@ -11,16 +11,7 @@ body.bg
   .wrapper
     include ../blocks/header/header
     .middle.clearfix
-      aside.sidebar
-        block main-menu
-        nav
-          include ../blocks/main-menu/main-menu
-        //include ../blocks/address-bar/address-bar
-
-        //block sidebar
-      section.content
-        block content
+      include ../blocks/sidebar/sidebar
   include ../blocks/footer/footer
-  //include ../login/login
   script(src="vendor.js")
   script(src="custom.js")
