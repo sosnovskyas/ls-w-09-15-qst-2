@@ -2,6 +2,7 @@
     VARIABLES
 */
 
+$footer-height: 222px;
 $browser-context: 16; // Default
 
 $color1: #f7f6f5; //gray
@@ -73,15 +74,16 @@ html, body{
 }
 .wrapper:after {
   content: "";
-  height: 80px;
+  height: $footer-height;
   display: block;
 }
 
 
 .bg{
   //noinspection CssUnknownTarget
-  background-image: url("/i/bg.png");
-  background-size: 100% auto;
+  background-color: #f4f4f4;
+  //background-image: url("/i/bg.png");
+  //background-size: 100% auto;
 }
 
 .clearfix {
