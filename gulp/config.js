@@ -45,13 +45,13 @@ module.exports = {
     concatFile: 'custom.css',
     settings: {
       indentedSyntax: true, // Enable .sass syntax!
-      imagePath: 'img' // Used by the image-url helper
+      imagePath: 'images' // Used by the image-url helper
     }
   },
   devCompass: {
-    src: src + '/bundles/templates/custom.scss',
-    sass: 'src/bundles/templates',
-    image: 'src/img',
+    src: src + '/templates/custom.scss',
+    sass: 'src/templates',
+    image: 'src/images',
     generated_images_path: 'build/dev/i',
     sourcemap: true,
     watch: src + '/**/*.scss',
@@ -60,7 +60,7 @@ module.exports = {
   },
   devSassSprites: {
     src: src + '/sprite/*.png',
-    exportImg: 'img/_sprite.png',
+    exportImg: 'images/_sprite.png',
     exportCss: 'sprite/_sprite.scss',
     dest: src
   },
@@ -96,8 +96,8 @@ module.exports = {
     dest: dev
   },
   devImage: {
-    watch: src + '/img/**/*',
-    src: src + '/img/*',
+    watch: src + '/images/**/*',
+    src: src + '/images/*',
     dest: dev + '/i'
   },
   devJade: {
