@@ -1,8 +1,26 @@
-// custom
+.header__top,
+.header__bottom
+{
+  &-content{
+    @extend .wrap-common;
+  }
+  background-color: #fff;
+  -webkit-box-shadow:  2px 2px 2px gray;
+  -moz-box-shadow: 2px 2px 2px gray;
+  box-shadow:  2px 2px 2px gray;
+}
+
+.header__middle
+{
+  @extend .wrap-common;
+  margin: 23px auto;
+}
+
 .header__search{
   float: left;
   width: 400px;
 }
 .header__logo{
   float: left;
+  padding-right: 56px;
 }

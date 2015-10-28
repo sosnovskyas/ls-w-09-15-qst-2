@@ -131,17 +131,15 @@ ul{
 }
 
 .middle{
-  min-width: 960px;
-  max-width: 960px;
-  margin: 0 auto;
-}
-.sidebar{
-  float: left;
-  width: 250px;
-  margin-right: 60px;
+  @extend .wrap-common;
 }
 
 .content{
   float: right;
-  width: 650px;
+  width: 742px;
+}
+
+.wrap-common{
+  width: 1100px;
+  margin: 0 auto;
 }

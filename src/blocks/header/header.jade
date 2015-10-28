@@ -1,10 +1,14 @@
 .header
   .header__top
-    include ../social/social
-  .header__middle.clearfix
-    .header__logo
-      include ../logo/logo
-    .header__search
-      include ../search/search
+    .header__top-content
+      include ../social/social
+      include ../address/address
+  .header__middle
+    .header__middle-content.clearfix
+      .header__logo
+        include ../logo/logo
+      .header__search
+        include ../search/search
   .header__bottom
-    include ../main-menu/main-menu
+    .header__bottom-content
+      include ../main-menu/main-menu
