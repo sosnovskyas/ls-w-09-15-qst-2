@@ -1,0 +1,7 @@
+.accordeon__content {
+  display: none;
+}
+.accordeon li.active .accordeon__content {
+  display: block;
+}
+

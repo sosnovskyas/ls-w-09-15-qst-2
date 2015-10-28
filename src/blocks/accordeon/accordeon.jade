@@ -1,7 +1,32 @@
-ul
-  li наличие в магазинах
-  li бренды
-  li
-   include ../price-slider/price-slider
-  li цвет
-  li операционные системы
+.accordeon
+  ul
+    li.active
+      .accordeon__header наличие в магазинах
+      .accordeon__content
+        h1 content
+        ul
+          li: a(href="#") item
+          li: a(href="#") item
+          li: a(href="#") item
+          li: a(href="#") item
+    li
+      .accordeon__header бренды
+      .accordeon__content
+        ul
+          li: a(href="#") item
+          li: a(href="#") item
+          li: a(href="#") item
+          li: a(href="#") item
+    li
+      .accordeon__header слайдер
+      .accordeon__content
+        include ../price-slider/price-slider
+    li
+      .accordeon__header  операционные системы
+      .accordeon__content
+        ul
+          li: a(href="#") item
+          li: a(href="#") item
+          li: a(href="#") item
+          li: a(href="#") item
+
