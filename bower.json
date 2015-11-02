@@ -16,7 +16,8 @@
     "tests"
   ],
   "dependencies": {
-    "normalize-scss": "~3.0.2"
+    "normalize-scss": "~3.0.2",
+    "jquery-ui": "~1.11.4"
   },
   "devDependencies": {
     "jquery": "~2.1.4",

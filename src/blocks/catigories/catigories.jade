@@ -1,0 +1,6 @@
+.catigories
+  ul.catigories__list
+    - var catigoriesItems = ['Флагманы','Бюджетная линейка']
+    each catigoriesItem in catigoriesItems
+      li(class='catigories__item' + ((catigoriesItem == 'Бюджетная линейка') ? ' active' : ''))
+        a(href='#').catigories__link= catigoriesItem

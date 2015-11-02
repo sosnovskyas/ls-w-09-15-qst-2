@@ -1,0 +1,25 @@
+.filter{
+  background-color: #fff;
+  -webkit-box-shadow:  2px 2px 2px gray;
+  -moz-box-shadow: 2px 2px 2px gray;
+  box-shadow:  2px 2px 2px gray;
+
+}
+.filter__content {
+  display: none;
+}
+.filter li.active .filter__content {
+  display: block;
+}
+
+.filter__item {
+  border-bottom: 1px solid #dee1e4;
+}
+
+.filter__header{
+  font-size: 20px;
+
+  cursor: pointer;
+
+  padding: 0 10px;
+}

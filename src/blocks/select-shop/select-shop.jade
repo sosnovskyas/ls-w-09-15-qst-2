@@ -1,0 +1,19 @@
+ul.select-shop.clearfix
+  - var shopsItems = ['Во всех магазинах','В ближайшем ко мне магазине']
+  each shopsItem in shopsItems
+    li.select-shop__item
+      label.select-shop__label
+        input(name='location', type='radio').select-shop__input
+        .select-shop__elem
+        .select-shop__text= shopsItem
+
+  //.item
+  //  label.custom-radio
+  //    input(name='test', value='1', type='radio' checked)
+  //    .zzz
+  //      .label Во всех магазинах
+  //.item
+  //  label.custom-radio
+  //    input(name='test', value='2', type='radio')
+  //    .zzz
+  //      .label В ближайшем ко мне магазине

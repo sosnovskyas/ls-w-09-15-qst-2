@@ -1,0 +1,5 @@
+- var menuItems = ['Карта проезда','История заказов','Корзина']
+ul.menu
+   each menuItem in menuItems
+      li(class="menu__item menu__item_" + menuItem)
+         a(href="#").menu__link= menuItem

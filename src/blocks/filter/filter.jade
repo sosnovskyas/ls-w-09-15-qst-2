@@ -1,0 +1,25 @@
+.filter.box
+  ul
+    li.filter__item.active
+      .filter__header Наличие в магазинах
+      .filter__content
+        include ../select-shop/select-shop
+    li.filter__item
+      .filter__header Бренды
+      .filter__content
+        include ../brand-list/brand-list
+    li.filter__item
+      .filter__header Цена
+      .filter__content
+        include ../price-slider/price-slider
+    li.filter__item
+      .filter__header  Цвета
+      .filter__content
+        include ../colors/colors
+    li.filter__item
+      .filter__header  Операционные системы
+      .filter__content
+        ul
+          li: a(href="#") IOS
+          li: a(href="#") Android
+          li: a(href="#") Blackberry

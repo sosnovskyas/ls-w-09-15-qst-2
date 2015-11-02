@@ -1,4 +1,12 @@
 .footer{
+  .footer__logo,
+  .footer__social,
+  .footer__copyright
+  {
+    @extend .wrap-common;
+    margin: 0 auto;
+  }
+
   height: $footer-height;
   margin-top: -$footer-height;
   //noinspection CssUnknownTarget

@@ -1,0 +1,10 @@
+ul.brand-list.clearfix
+  - var brandItems = ['Lenovo','Apple','Samsung','Asus','Motorola']
+  each brandItem in brandItems
+    li.brand-list__item
+      label.brand-list__label
+        input(name='location', type='checkbox').brand-list__input
+        .brand-list__elem
+        .brand-list__text= brandItem
+  .brand-list__reset-wrap
+    a(href='#').brand-list__reset Сбросить фильтр

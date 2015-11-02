@@ -8,11 +8,18 @@ doctype html
 head
     include head
 body.bg
+  <!--[if lt IE 8]>
+  <p class="chromeframe"> Вы используете устаревший браузер </p>
+  <![endif]-->
+
   .wrapper
     include ../blocks/header/header
+    include ../blocks/breadcrumbs/breadcrumbs
+
     .middle.clearfix
-      include ../blocks/sidebar/sidebar
       block content
+
   include ../blocks/footer/footer
+
   script(src="vendor.js")
   script(src="custom.js")

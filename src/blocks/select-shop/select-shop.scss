@@ -1,0 +1,19 @@
+.select-shop{
+  label.custom-radio input{
+    display: none;
+  }
+  label.custom-radio input+div{
+    content: "\a";
+    background: green;
+    width: 20px;
+    height: 20px;
+  }
+  label.custom-radio input:checked+div{
+    background: red
+  }
+
+  .label{
+    padding-left: 25px;
+    width: 300px;
+  }
+}

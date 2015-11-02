@@ -60,9 +60,10 @@ $color1: #f7f6f5; //gray
 /*
     STYLES
 */
-html, body{
+html,
+body{
   height: 100%;
-  width: 100%;
+  min-width: 1100px;
 }
 
 // stiky footer
@@ -130,16 +131,25 @@ ul{
   }
 }
 
-.middle{
-  @extend .wrap-common;
+.wrapper{
+  //@extend .wrap-common;
 }
-
 .content{
   float: right;
   width: 742px;
 }
 
+.middle{
+  @extend .wrap-common;
+}
+
 .wrap-common{
-  width: 1100px;
+  //min-width: 1100px;
+  max-width: 1256px;
   margin: 0 auto;
+}
+
+.main-title{
+  margin-bottom: 34px;
+
 }
