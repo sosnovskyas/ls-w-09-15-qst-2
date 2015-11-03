@@ -1,7 +1,11 @@
+case blockPosition
+  when "header": - var imgTheme = "dark"
+  when "footer": - var imgTheme = "white"
+  default: - var imgTheme = "dark"
 - var socialIcons = ['fb', 'vk', 'tw']
-ul.social
+ul(class=blockPosition + "__social")
   each socialIcon in socialIcons
-    li(class="social__item social__item_" + socialIcon)
+    li(class="social__item social__item_"+ imgTheme + '-' + socialIcon)
       a(href='#', target="_blank").social__link
-        .social__icon
+        div(class="social__icon-" + imgTheme)
           span.social__text= socialIcon

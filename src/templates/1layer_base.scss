@@ -20,9 +20,11 @@ $orange: #ff6b23;
 //noinspection CssUnknownTarget
 @import "compass/utilities/sprites";
 //noinspection CssUnknownTarget
-@import 'sprite/*.png';
+@import 'social-dark/*.png';
+@import 'social-white/*.png';
 //noinspection SassScssUnresolvedMixin
-@include all-sprite-sprites;
+@include all-social-white-sprites;
+@include all-social-dark-sprites;
 // for sticky footer
 //noinspection CssUnknownTarget
 @import "compass/layout";
@@ -80,7 +82,7 @@ $orange: #ff6b23;
 
   background: $sprite-map $sprite-position $repeat;
 
-  @if (height == true) {
+  @if ($height == true) {
     $sprite-height: image-height($sprite-image);
     height: $sprite-height;
   }

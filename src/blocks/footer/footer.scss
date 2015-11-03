@@ -1,8 +1,6 @@
 .footer{
-  .footer__logo,
-  .footer__social,
-  .footer__copyright
-  {
+  .footer__top,
+  .footer__bottom{
     @extend .wrap-common;
     margin: 0 auto;
   }
@@ -12,4 +10,28 @@
   //noinspection CssUnknownTarget
   background-image: url('i/footer-bg.png');
   @include set_font("open_sans",14px, #fff);
+}
+
+.footer__logo{
+  float: left;
+  margin-top: 72px;
+  margin-bottom: 83px;
+}
+
+.footer__bottom{
+  border-top: 1px solid #494949;
+}
+.footer__copyright{
+  text-align: center;
+}
+
+
+.footer__social,
+.footer__nav{
+  //float: right;
+}
+
+.footer__right{
+  float: right;
+  margin-top: 35px;
 }

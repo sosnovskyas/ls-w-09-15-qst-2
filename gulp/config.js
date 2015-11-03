@@ -59,9 +59,9 @@ module.exports = {
     concatFile: 'custom.css'
   },
   devSassSprites: {
-    src: src + '/sprite/*.png',
+    src: src + '/social-dark/*.png',
     exportImg: 'images/_sprite.png',
-    exportCss: 'sprite/_sprite.scss',
+    exportCss: 'social-dark/_sprite.scss',
     dest: src
   },
 
