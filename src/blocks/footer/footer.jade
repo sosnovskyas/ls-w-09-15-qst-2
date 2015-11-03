@@ -8,11 +8,11 @@
         include ../social/social
       .footer__nav
         nav.nav
-          - var navItems = ['планшеты','мобильные телефоны','МР3 плееры','персональные компьютеры','ноутбуки','аксесуары','бытовая техника']
-          ul
+          - var navItems = ['Планшеты','Мобильные телефоны','МР3 плееры','Персональные компьютеры','Ноутбуки','Аксесуары','Бытовая техника']
+          ul.footer__nav-list
             each navItem in navItems
-              li(class="footer__nav-item footer__nav-item_" + ((navItem == "мобильные телефоны") ? ' active' : ''))
-                a(href="#").nav__link= navItem
+              li(class=blockPosition + "__nav-item" + ((navItem == "мобильные телефоны") ? ' active' : ''))
+                a(href="#").footer__nav-link= navItem
   .footer__bottom
     .footer__copyright
       | All rights reserved. 2015. no copy alowed

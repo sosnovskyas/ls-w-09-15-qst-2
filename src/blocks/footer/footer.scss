@@ -25,13 +25,28 @@
   text-align: center;
 }
 
-
-.footer__social,
-.footer__nav{
-  //float: right;
-}
-
 .footer__right{
   float: right;
   margin-top: 35px;
+  margin-right: 5px;
+}
+
+.footer__nav-list{
+  max-width: 550px;
+}
+.footer__nav-item{
+  @include inlineblock();
+}
+.footer__nav-link{
+  @include open-sans();
+  text-decoration: underline;
+  color: #fff;
+  font-size: 14px;
+  margin-left: 23px;
+  line-height: 35px;
+}
+
+.footer__social,
+.footer__nav{
+  text-align: right;
 }

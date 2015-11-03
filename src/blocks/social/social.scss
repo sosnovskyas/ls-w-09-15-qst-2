@@ -1,17 +1,19 @@
-.header__social{
-  float: left;
-  width: 50%;
-}
-.footer__social{
-  //float: left;
-  //width: 50%;
-}
-.social__item {
+.social__item-dark {
   @include inlineblock(middle);
   margin-left: 12px;
 
   &:first-child {
     margin-left: 0;
+  }
+}
+
+.social__item-white {
+  @include inlineblock(middle);
+  margin-left: 23px;
+  margin-bottom: 22px;
+
+  &:first-child {
+    margin-left: -7px;
   }
 }
 
@@ -21,17 +23,7 @@
 
 .social__link{
   display: block;
-  //width: 26px;
-  //height: 26px;
-  //@include border-radius(50%);
-
-  //background: #333333;
-  //position: relative;
 }
-
-//.sociall_icon {
-//  @include absolute-center;
-//}
 
 $socials: fb, vk, tw;
 $socials-white-map: sprite-map('social-white/*.png', $spacing: 70px);

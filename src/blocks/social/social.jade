@@ -5,7 +5,7 @@ case blockPosition
 - var socialIcons = ['fb', 'vk', 'tw']
 ul(class=blockPosition + "__social")
   each socialIcon in socialIcons
-    li(class="social__item social__item_"+ imgTheme + '-' + socialIcon)
+    li(class="social__item-"+ imgTheme + " social__item_"+ imgTheme + '-' + socialIcon)
       a(href='#', target="_blank").social__link
         div(class="social__icon-" + imgTheme)
           span.social__text= socialIcon
