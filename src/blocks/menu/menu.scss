@@ -1,0 +1,24 @@
+.menu{
+  float: left;
+  padding-top: 8px;
+}
+
+.menu__link{
+  font-size: 16px;
+  line-height: 18px;
+  color: $black;
+  @include open-sans(semibold);
+  text-decoration: none;
+
+  &:hover{
+    color: $orange;
+  }
+}
+
+.menu__item{
+  @include inlineblock();
+  margin-left: 30px;
+  &:first-child{
+    margin-left: 0;
+  }
+}

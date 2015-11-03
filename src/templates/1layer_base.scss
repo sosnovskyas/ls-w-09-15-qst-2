@@ -6,6 +6,9 @@ $footer-height: 222px;
 $browser-context: 16; // Default
 
 $color1: #f7f6f5; //gray
+$black: #000;
+$orange: #ff6b23;
+
 
 /*
     IMPORTS
@@ -32,6 +35,71 @@ $color1: #f7f6f5; //gray
 /*
     MIXINS
 */
+@import "fonts";
+
+@mixin inlineblock($valine: top) {
+  display: inline-block;
+  vertical-align: $valine;
+}
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin transform($transforms...) {
+  -webkit-transform: $transforms;
+  -moz-transform: $transforms;
+  -ms-transform: $transforms;
+  -o-transform: $transforms;
+  transform: $transforms;
+}
+
+@mixin border-radius($radius:5px) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+
+@mixin get-sprite($map, $sprite, $repeat: no-repeat, $height: true, $width: true) {
+  $sprite-image: sprite-file($map, $sprite);
+  $sprite-map: sprite-url($map);
+  $sprite-position: sprite-position($map, $sprite);
+  $sprite-layout: smart;
+
+  background: $sprite-map $sprite-position $repeat;
+
+  @if (height == true) {
+    $sprite-height: image-height($sprite-image);
+    height: $sprite-height;
+  }
+
+  @if ($width == true) {
+    $sprite-width: image-width($sprite-image);
+    width: $sprite-width;
+  }
+}
+
+@mixin absolute-center {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+}
+
 //noinspection CssInvalidFunction
 @mixin insert_sprite($sprite-name){
   height: sprite-sprite-height($sprite-name);
@@ -63,7 +131,7 @@ $color1: #f7f6f5; //gray
 html,
 body{
   height: 100%;
-  min-width: 1100px;
+  min-width: 1256px;
 }
 
 // stiky footer
@@ -145,11 +213,18 @@ ul{
 
 .wrap-common{
   //min-width: 1100px;
-  max-width: 1256px;
+  padding: 0 78px;
+
+  max-width: 1100px;
+  //min-width: 1100px;
   margin: 0 auto;
 }
 
 .main-title{
-  margin-bottom: 34px;
+  margin-bottom: 28px;
 
+  @include open-sans(bold);
+  font-size: 20px;
 }
+
+$misc-sprite: sprite-map('misc/*.png', $spacing: 70px);

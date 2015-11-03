@@ -1,0 +1,10 @@
+ul.os-list.clearfix
+  - var brandItems = ['Android','iOS','Widows Mobile','Simbain','Custom']
+  each brandItem in brandItems
+    li.os-list__item
+      label.os-list__label
+        input(name='os', type='checkbox').os-list__input
+        .os-list__elem
+        .os-list__text= brandItem
+  .os-list__reset-wrap
+    a(href='#').os-list__reset Сбросить фильтр

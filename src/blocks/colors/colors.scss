@@ -1,0 +1,24 @@
+.colors{
+  margin-left: -10px;
+  padding-top: 7px;
+}
+
+.colors__link{
+  width: 35px;
+  height: 35px;
+  display: block;
+
+  border: 1px solid #dee1e4;
+}
+
+.colors__item{
+  @include inlineblock();
+  border: 3px solid transparent;
+  margin-left: 11.7px;
+  margin-bottom: 16px;
+
+  &:hover{
+    border-color: $orange;
+    @include border-radius();
+  }
+}

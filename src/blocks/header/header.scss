@@ -1,8 +1,11 @@
+.header{
+  margin-bottom: 28px;
+}
 .header__top,
-.header__bottom
-{
+.header__bottom {
   &-content{
     @extend .wrap-common;
+    @include clearfix;
   }
   background-color: #fff;
   -webkit-box-shadow:  2px 2px 2px gray;
@@ -13,12 +16,12 @@
 .header__middle
 {
   @extend .wrap-common;
-  margin: 23px auto;
+  margin: 30px auto;
 }
 
 .header__search{
   float: left;
-  width: 400px;
+  //width: 400px;
 }
 .header__logo{
   float: left;
@@ -26,5 +29,10 @@
 }
 
 .header__bottom{
-  margin-bottom: 35px;
 }
+
+.header__top{
+  min-height: 78-25px;
+  padding-top: 25px;
+}
+

@@ -5,12 +5,14 @@
       include ../address/address
   .header__middle
     .header__middle-content.clearfix
-      .header__logo
+      .header__logo.clearfix
+        - var logoPosition="header"
         include ../logo/logo
-      .header__search
+      .header__search.clearfix
         include ../search/search
-      .header__menu
+      .header__menu.clearfix
         include ../menu/menu
   .header__bottom
     .header__bottom-content
-      include ../nav/nav
+      nav.nav
+        include ../nav/nav

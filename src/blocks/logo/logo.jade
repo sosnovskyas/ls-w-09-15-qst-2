@@ -1,2 +1,7 @@
-.logo
-  img(src="/i/logo.png")
+case logoPosition
+  when "header": - var img = "i/logo.png"
+  when "footer": - var img = "i/logo-footer.png"
+  default: - var img = "i/logo.png"
+a.logo
+  img(src= img, alt='cooltech logo').logo__img
+  .logo__text cooltech

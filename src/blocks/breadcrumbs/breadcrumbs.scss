@@ -1,5 +1,30 @@
 .breadcrumbs {
   @extend .wrap-common;
 
-  margin-bottom: 34px;
+  margin-bottom: 20px;
+}
+
+.breadcrumbs__item {
+  @include inlineblock();
+
+  &:first-child{
+    &:before{
+      content: '';
+    }
+  }
+
+  &:before{
+    content: ' > ';
+  }
+  a{
+    @include open-sans(light);
+    font-size: 14px;
+    
+    color: $black;
+
+    &:hover{
+      color: $orange;
+      text-decoration: underline;
+    }
+  }
 }

@@ -1,6 +1,7 @@
 - var socialIcons = ['fb', 'vk', 'tw']
 ul.social
   each socialIcon in socialIcons
-    li(class="social__item social__item_" + socialIcon): a(href='#', target="_blank")
-      .social__icon
-        span.social__text= socialIcon
+    li(class="social__item social__item_" + socialIcon)
+      a(href='#', target="_blank").social__link
+        .social__icon
+          span.social__text= socialIcon

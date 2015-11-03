@@ -1,46 +1,27 @@
 .search{
-  //noinspection SassScssUnresolvedMixin
-  @include border-radius(3px);
-  border-color: gray;
-  border-width: 1px;
-  border-style: solid;
-  @include set_font("open_sanslight",14px, #7f7f7f);
+  float: left;
+  margin-right: 46px;
+  //margin-left: 50px;
+}
+
+.search__query{
+  border: 1px solid #dee1e4;
+  @include border-radius(5px);
+  padding: 8px 15px;
+  width: 259px;
+  margin-right: -7px;
 
   outline: none;
+}
 
-  position: relative;
-  overflow: hidden;
+.search__submit{
+  width: 78px;
+  height: 36px;
+  background: $orange;
+  color: #fff;
+  @include open-sans(semibold);
+  @include border-radius(0 5px 5px 0);
+  border: 1px solid $orange;
 
-  height: 35px;
-
-  padding: 0;
-  margin: 5px;
-
-  .search__query{
-    border: none;
-    outline: none;
-    overflow: hidden;
-
-    float: left;
-
-    width: 100%;
-    height: 100%;
-
-  }
-  .search__submit{
-    @include set_font("open_sanslight",14px, #fff);
-    position: absolute;
-
-    outline: none;
-    border: none;
-
-    height: 35px;
-
-    right: 0;
-    top: 0;
-
-    margin: 0 -5px 0 0;
-    padding: 0 15px 0 10px;
-    background-color: #ff6600;
-  }
+  outline: none;
 }

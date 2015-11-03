@@ -1,0 +1,23 @@
+.price-slider__from{
+  float: left;
+  width: 50%;
+}
+.price-slider__to{
+  float: right;
+  width: 50%;
+}
+
+.price-slider__from-value,
+.price-slider__to-value{
+  width: 83px;
+  @include inlineblock(middle);
+  @include border-radius();
+  outline: none;
+  border: 1px solid #dee1e4;
+  padding: 2px;
+  font-size: 14px;
+}
+
+.price-slider__text{
+  @include inlineblock(middle);
+}

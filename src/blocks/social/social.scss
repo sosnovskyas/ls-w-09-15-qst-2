@@ -1,0 +1,41 @@
+.social{
+  float: left;
+  width: 50%;
+}
+.social__item {
+  @include inlineblock(middle);
+  margin-left: 12px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.social__text{
+  opacity: 0;
+}
+
+.social__link{
+  display: block;
+  width: 26px;
+  height: 26px;
+  @include border-radius(50%);
+
+  background: #333333;
+  position: relative;
+}
+
+.sociall_icon {
+  @include absolute-center;
+}
+
+$socials: fb, vk, tw;
+$socials-map: sprite-map('sprite/*.png', $spacing: 70px);
+
+@each $social in $socials {
+  .social__item_#{$social} {
+    .social__icon {
+      @include get-sprite($socials-map, $social);
+    }
+  }
+}

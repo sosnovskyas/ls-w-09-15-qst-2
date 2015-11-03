@@ -1,0 +1,37 @@
+.address{
+  @include inlineblock(middle);
+  margin-right: 65px;
+  margin-left: 85px;
+  @include open-sans();
+  font-size: 14px;
+  color: $black;
+
+  &:before{
+    content: '';
+    width: 26px;
+    height: 26px;
+    @include get-sprite($misc-sprite, pin);
+    @include inlineblock(middle);
+    margin-right: 9px;
+    margin-top: 5px;
+  }
+}
+
+.phone{
+  @include inlineblock(middle);
+  @include open-sans(semibold);
+  font-size: 18px;
+
+  color: $black;
+  text-decoration: none;
+  margin-left: 23px;
+  &:before{
+    content: '';
+    width: 26px;
+    height: 26px;
+    @include get-sprite($misc-sprite, phone);
+    @include inlineblock(middle);
+    margin-right: 9px;
+    margin-top: 5px;
+  }
+}

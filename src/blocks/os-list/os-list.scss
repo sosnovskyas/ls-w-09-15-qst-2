@@ -1,0 +1,64 @@
+.os-list__elem{
+  border: 3px solid #dee1e4;
+  background: #dee1e4;
+  width: 13px;
+  height: 13px;
+  //@include border-radius(5px);
+  position: relative;
+  @include inlineblock();
+
+
+  &:after{
+    content: '';
+    @include absolute-center();
+    width: 0;
+    height: 0;
+    @include border-radius(50%);
+
+  }
+}
+.os-list__label{
+  position: relative;
+}
+
+.os-list__input{
+  position: absolute;
+  top: 0;
+  left: -99999px;
+  &:hover  + .os-list__elem{
+    @include get-sprite($misc-sprite, check-h);
+    background-color: #dee1e4;
+  }
+
+  &:checked + .os-list__elem{
+    border-color: $orange;
+    @include border-radius();
+    background-color: $orange;
+
+    &:after{
+      width: 10px;
+      height: 10px;
+      @include get-sprite($misc-sprite, check);
+      @include border-radius(0);
+    }
+  }
+}
+
+.os-list__text{
+  @include open-sans();
+  @include inlineblock(top);
+  font-size: 14px;
+  line-height: 16px;
+  color: $black;
+
+  margin-left: 6px;
+}
+.os-list__item{
+  padding: 10px 2px;
+}
+
+.os-list__reset{
+  color: #5bd2fc;
+  font-size: 14px;
+
+}

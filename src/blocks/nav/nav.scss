@@ -1,7 +1,11 @@
+.nav__list{
+  margin-left: 7px;
+}
 .nav__item{
   //display: inline-block;
+  @include open-sans();
   float: left;
-  padding: 21px 15px;
+  padding: 15px 15.5px;
   margin: 0;
 
   a{

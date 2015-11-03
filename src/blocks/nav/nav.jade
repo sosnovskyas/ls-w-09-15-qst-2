@@ -1,5 +1,5 @@
-- var navItems = ['планшеты','мобильные телефоны','МР3 плееры','персональные компьютеры','ноутбуки','аксесуары','бытовая техника']
-ul.nav.clearfix
+- var navItems = ['Планшеты','Мобильные телефоны','МР3 плееры','Персональные компьютеры','Ноутбуки','Аксесуары','Бытовая техника']
+ul.nav__list.clearfix
   each navItem in navItems
-    li(class="nav__item nav__item_" + ((navItem == "мобильные телефоны") ? ' active' : ''))
+    li(class="nav__item nav__item_" + ((navItem == "Мобильные телефоны") ? ' active' : ''))
       a(href="#").nav__link= navItem

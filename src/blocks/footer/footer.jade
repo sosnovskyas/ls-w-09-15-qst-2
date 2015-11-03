@@ -1,7 +1,17 @@
 .footer
-  .footer__logo
-    include ../logo/logo
-  .footer__social
-    include ../social/social
-  .footer__copyright
-    | All rights reserved. 2015. no copy alowed
+  .footer__top
+    .footer__logo
+      - var logoPosition="footer"
+      include ../logo/logo
+    .footer__social
+      include ../social/social
+    .footer__nav
+      nav.nav
+        - var navItems = ['планшеты','мобильные телефоны','МР3 плееры','персональные компьютеры','ноутбуки','аксесуары','бытовая техника']
+        ul.clearfix
+          each navItem in navItems
+            li(class="footer__nav-item footer__nav-item_" + ((navItem == "мобильные телефоны") ? ' active' : ''))
+              a(href="#").nav__link= navItem
+  .footer__bottom
+    .footer__copyright
+      | All rights reserved. 2015. no copy alowed

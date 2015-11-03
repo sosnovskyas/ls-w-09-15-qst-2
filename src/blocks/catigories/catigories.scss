@@ -1,3 +1,23 @@
 .catigories{
   margin-bottom: 39px;
+
+  @include border-radius(3px);
+  // для border-radius
+  overflow: hidden;
+  background: #fff;
+
+  .active{
+    background: #d9e5ea;
+  }
+}
+
+.catigories__link{
+  padding: 13px 27px;
+
+  @include open-sans();
+  font-size: 14px;
+
+  display: block;
+
+  color: #5d656c;
 }

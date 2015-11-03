@@ -1,19 +1,66 @@
-.select-shop{
-  label.custom-radio input{
-    display: none;
-  }
-  label.custom-radio input+div{
-    content: "\a";
-    background: green;
-    width: 20px;
-    height: 20px;
-  }
-  label.custom-radio input:checked+div{
-    background: red
-  }
+//.select-shop{
+//  label.custom-radio input{
+//    display: none;
+//  }
+//  label.custom-radio input+div{
+//    content: "\a";
+//    background: green;
+//    width: 20px;
+//    height: 20px;
+//  }
+//  label.custom-radio input:checked+div{
+//    background: red
+//  }
+//
+//  .label{
+//    padding-left: 25px;
+//    width: 300px;
+//  }
+//}
 
-  .label{
-    padding-left: 25px;
-    width: 300px;
+.select-shop__elem{
+  border: 3px solid $orange;
+  width: 13px;
+  height: 13px;
+  @include border-radius(50%);
+  position: relative;
+  @include inlineblock();
+
+  &:after{
+    content: '';
+    @include absolute-center();
+    width: 0;
+    height: 0;
+    @include border-radius(50%);
+    background: $orange;
+
   }
+}
+
+.select-shop__label{
+  position: relative;
+}
+.select-shop__input{
+  position: absolute;
+  top: 0;
+  left: -99999px;
+
+  &:checked + .select-shop__elem{
+    border-color: $orange;
+    &:after{
+      width: 9px;
+      height: 9px;
+    }
+  }
+}
+
+.select-shop__text{
+  @include inlineblock(top);
+  font-size: 14px;
+  line-height: 16px;
+  color: $black;
+
+}
+.select-shop__item{
+  padding: 11px 2px;
 }
