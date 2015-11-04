@@ -1,0 +1,69 @@
+.sort{
+  background: #e4ebee;
+  @include clearfix;
+  @include border-radius;
+  border: 1px solid $gray;
+  margin-bottom: 21px;
+}
+
+.sort__title{
+  font-size: 14px;
+  @include inlineblock(middle);
+}
+.sort__select{
+  @include inlineblock(middle);
+}
+
+.sort__left{
+  float: left;
+  width: 50%;
+}
+.sort__right{
+  float: right;
+  width: 50%;
+  text-align: right;
+}
+
+.sort__view{
+  @include inlineblock(middle);
+}
+
+.sort__view-list{
+  @include clearfix();
+}
+
+.sort__view-item {
+  float: left;
+  border-left: 1px solid $gray;
+}
+
+.sort__view-link{
+  width: 50px;
+  height: 50px;
+  position: relative;
+  display: block;
+  outline: none !important;
+}
+
+.sort__view-icon{
+  @include absolute-center;
+}
+
+$views-map: sprite-map('view/*.png', $spacing: 70px);
+$sorts: rows, grids, lines;
+
+@each $sort in $sorts {
+  .sort__view-#{$sort} {
+    .sort__view-icon {
+      @include get-sprite($views-map, $sort);
+    }
+
+    &:hover {
+      $hover-icon: $sort + '-hover';
+
+      .sort__view-icon {
+        @include get-sprite($views-map, $hover-icon)
+      }
+    }
+  }
+}

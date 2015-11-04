@@ -13,7 +13,7 @@
   @include inlineblock(middle);
   @include border-radius();
   outline: none;
-  border: 1px solid #dee1e4;
+  border: 1px solid $gray;
   padding: 2px;
   font-size: 14px;
 }

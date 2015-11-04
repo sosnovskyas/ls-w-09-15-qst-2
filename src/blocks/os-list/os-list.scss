@@ -1,6 +1,6 @@
 .os-list__elem{
-  border: 3px solid #dee1e4;
-  background: #dee1e4;
+  border: 3px solid $gray;
+  background: $gray;
   width: 13px;
   height: 13px;
   //@include border-radius(5px);
@@ -27,7 +27,7 @@
   left: -99999px;
   &:hover  + .os-list__elem{
     @include get-sprite($misc-sprite, check-h);
-    background-color: #dee1e4;
+    background-color: $gray;
   }
 
   &:checked + .os-list__elem{

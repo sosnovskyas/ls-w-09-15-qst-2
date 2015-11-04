@@ -5,7 +5,7 @@
 }
 
 .search__query{
-  border: 1px solid #dee1e4;
+  border: 1px solid $gray;
   @include border-radius(5px);
   padding: 8px 15px;
   width: 259px;
