@@ -1,5 +1,5 @@
 .products
-  ul.products__list
+  ul.products__list.products__list_lines
     - for (var i = 0; i <9; i++)
       li.products__item
         .products__item-inner
@@ -17,20 +17,22 @@
                 .products__article-word Артикул
                 .products__article-num 123216
             .products__description
-              .products__description-title QWEQWEWQEE
+              .products__description-title QWEQWEWQEE wesdf sdfg erth dty rghj ft
               ul.products__options
                 - var options = {'Тип SIM-карты':'Micro-SIM', 'Количество SIM-карт':'1','Цвет':'Белый','OS':'Android','Связь 3G':'Есть','4G (LTE)':'Нет','GPS-модуль':'Есть'}
-                each value,key in options
-                  li.products__option-item= key
-                  li.products__option-value= value
+                //each value,key in options
+                - var index = 1
+                - for (item in options)
+                  li(class="products__option-item" + ((index++ % 2) ? ' products__option-item_gray' : ''))
+                    .products__option-key= item
+                    .products__option-value= options[item]
               .products__rating
                 ul.products__rating-stars
                   li.products__rating-stars-item.products__rating-stars-item_filled
                   li.products__rating-stars-item.products__rating-stars-item_filled
                   li.products__rating-stars-item.products__rating-stars-item_filled
-                  li.products__rating-stars-item
-                  li.products__rating-stars-item
-                  li.products__rating-stars-item
+                  li.products__rating-stars-item.products__rating-stars-item_empty
+                  li.products__rating-stars-item.products__rating-stars-item_empty
                 .products__rating-amount 3
           .products__right
             .products__info

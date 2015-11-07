@@ -33,4 +33,19 @@
 .pagination__mark {
   @include absolute-center;
   line-height: 26px;
+  text-align: center;
+  @include open-sans(bold);
+  font-size: 12px;
+  color: #7f7f7f;
+}
+
+.pagination__item_next{
+  .pagination__mark{
+    @include get-sprite($misc-sprite, next);
+  }
+}
+.pagination__item_prev{
+  .pagination__mark{
+    @include get-sprite($misc-sprite, prev);
+  }
 }
