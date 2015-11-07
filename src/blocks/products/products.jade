@@ -7,18 +7,18 @@
             .products__slideshow
               .products__slideshow-block
                 a(href="#").products__slideshow-display
-                  img(src="http://lorempixel.com/200/200/technics/6", alt="")
+                  img(src="http://lorempixel.com/200/200/technics/6", alt="").products__slideshow-image
                 ul.products__slideshow-tumbs
                   - for (var x = 0; x <3; x++)
                     li.products__slideshow-item
                       a(href="#").products__slideshow-link
-                        img(src="http://lorempixel.com/45/45/technics/" + x, alt="")
+                        img(src="http://lorempixel.com/45/45/technics/" + x, alt="").products__slideshow-tumbs-image
               .products__article
                 .products__article-word Артикул
-                .products__article-num 123
+                .products__article-num 123216
             .products__description
               .products__description-title QWEQWEWQEE
-              ul.products__description-options
+              ul.products__options
                 - var options = {'Тип SIM-карты':'Micro-SIM', 'Количество SIM-карт':'1','Цвет':'Белый','OS':'Android','Связь 3G':'Есть','4G (LTE)':'Нет','GPS-модуль':'Есть'}
                 each value,key in options
                   li.products__option-item= key
@@ -36,7 +36,7 @@
             .products__info
               .products__price 11 290
                 i.rub
-            .products__info-button
-              a(href="#").products__buy-btn
+            .products__info-bottom
+              a(href="#").products__buy-button В корзину
               .products__availability
                 | В наличии
