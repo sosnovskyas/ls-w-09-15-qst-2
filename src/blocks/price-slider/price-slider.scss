@@ -21,3 +21,26 @@
 .price-slider__text{
   @include inlineblock(middle);
 }
+
+.ui-slider-horizontal{
+  height: 3px;
+  background: $gray;
+  @include border-radius(0);
+  border: 0 none;
+  margin-top: 14px;
+  margin-bottom: 14px;
+
+  * {
+    outline: none !important;
+  }
+  .ui-slider-range{
+    background: $orange;
+  }
+  .ui-slider-handle{
+    @include get-sprite($misc-sprite, slider-pimpa);
+    top: 0;
+    border: 0 none;
+    @include border-radius(0);
+    margin-left: -4px;
+  }
+}
