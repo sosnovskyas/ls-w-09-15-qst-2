@@ -5,12 +5,19 @@
   border: 1px solid $gray;
   margin-bottom: 21px;
 }
-
+.sort__select-wrap{
+  padding-left: 20px;
+  padding-top: 10px;
+}
 .sort__title{
   font-size: 14px;
+  color: #5d656c;
+  margin-right: 10px;
+  @include open-sans();
   @include inlineblock(middle);
 }
 .sort__select{
+
   @include inlineblock(middle);
 }
 
@@ -63,6 +70,59 @@ $sorts: rows, grids, lines;
 
       .sort__view-icon {
         @include get-sprite($views-map, $hover-icon)
+      }
+    }
+  }
+}
+
+.select2-container{
+  width: 160px !important;
+
+  *{
+    outline: none !important;
+  }
+  .select2-selection__arrow {
+    b{
+      @include get-sprite($misc-sprite, to-top);
+      height: 9px !important;
+      width: 13px !important;
+      border: 0 none !important;
+      margin: auto !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+    }
+  }
+  &.select2-container--open{
+    b{
+      @include get-sprite($misc-sprite, to-bottom);
+    }
+
+  }
+
+  .select2-selection__rendered {
+    font-size: 12px;
+    @include open-sans(light);
+    color: #7f7f7f;
+  }
+
+  .select2-dropdown {
+    margin-top: 2px;
+    border: 0 none;
+    @include border-radius(5px);
+    background: #ffffff;
+
+    .select2-results__option {
+      background: #ffffff;
+      font-size: 14px;
+      line-height: 16px;
+      @include open-sans(light);
+      color: #7f7f7f;
+
+      &.select2-results__option--highlighted {
+        color: #333333 !important;
+        @include open-sans(semibold);
       }
     }
   }

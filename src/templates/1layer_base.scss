@@ -35,7 +35,8 @@ $orange: #ff6b23;
 //noinspection CssUnknownTarget
 @import "compass/css3/inline-block";
 
-@import "jquery-ui.scss";
+@import "jquery-ui";
+@import "select2";
 
 /*
     MIXINS

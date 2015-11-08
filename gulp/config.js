@@ -91,7 +91,8 @@ module.exports = {
     src: [
       './bower_components/jquery/dist/jquery.js',
       './bower_components/bPopup/jquery.bpopup.js',
-      './bower_components/jquery-ui/jquery-ui.js'
+      './bower_components/jquery-ui/jquery-ui.js',
+      './bower_components/select2/dist/js/select2.min.js'
     ],
     concatFile: 'vendor.js',
     dest: dev
