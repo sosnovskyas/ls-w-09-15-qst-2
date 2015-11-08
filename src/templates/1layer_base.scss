@@ -2,14 +2,21 @@
     VARIABLES
 */
 
+// sizes
 $footer-height: 222px;
 $browser-context: 16; // Default
 
+// colors
 $color1: #f7f6f5; //gray
 $black: #000;
 $gray: #dee1e4;
 $orange: #ff6b23;
 
+// sprite-maps
+$views-map: sprite-map('view/*.png', $spacing: 70px);
+$misc-sprite: sprite-map('misc/*.png', $spacing: 70px);
+$socials-white-map: sprite-map('social-white/*.png', $spacing: 70px);
+$socials-dark-map: sprite-map('social-dark/*.png', $spacing: 70px);
 
 /*
     IMPORTS
@@ -233,4 +240,16 @@ ul{
   font-size: 20px;
 }
 
-$misc-sprite: sprite-map('misc/*.png', $spacing: 70px);
+
+.attention{
+  .attentioo__text{
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+
+    text-align: justify;
+  }
+}
+.main-content{
+  @include clearfix;
+}

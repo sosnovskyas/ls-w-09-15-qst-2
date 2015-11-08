@@ -56,7 +56,6 @@
   @include absolute-center;
 }
 
-$views-map: sprite-map('view/*.png', $spacing: 70px);
 $sorts: rows, grids, lines;
 
 @each $sort in $sorts {

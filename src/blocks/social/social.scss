@@ -26,8 +26,6 @@
 }
 
 $socials: fb, vk, tw;
-$socials-white-map: sprite-map('social-white/*.png', $spacing: 70px);
-$socials-dark-map: sprite-map('social-dark/*.png', $spacing: 70px);
 
 @each $social in $socials {
   .social__item_white-#{$social} {
